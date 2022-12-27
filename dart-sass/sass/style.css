@@ -1,18 +1,31 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+}
+header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 p {
-  font-family: "Roboto", sans empattement;
-  color: black;
+  font-size: 14px;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Shrikhand", cursive;
+h2 {
+  font-size: 18px;
 }
 
-.logo {
-  width: 100%;
+h3 {
+  font-size: 14px;
 }
 
 .search {
@@ -20,16 +33,91 @@ h1, h2, h3, h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-content: center;
+  background-color: rgba(216, 215, 215, 0.877);
+}
+.search .icon {
+  margin-right: 10px;
 }
 .search h2, .search p {
   width: 80%;
+  margin: 0px;
+}
+.search h2 {
+  margin-top: 20px;
+}
+.search p {
+  margin-top: 5px;
+}
+.search .loc {
+  width: 40%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.search button {
+  margin-top: 20px;
+  border-radius: 20px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border: 2px solid white;
+  width: 180px;
+  height: 40px;
+  color: white;
+}
+.search .search_background {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#fonction, #restaurant {
+  margin: 0px 10px 0px 10px;
+}
+
+#fonction {
+  width: 100%;
+  margin-top: 50px;
+}
+#fonction h2 {
+  width: 50%;
+}
+#fonction ul {
+  padding: 0;
+}
+#fonction ul li {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
+  margin-top: 15px;
+}
+#fonction ul li i {
+  margin-right: 20px;
+  color: grey;
+}
+#fonction ul li .circle_violet {
+  background: #9356DC;
+  color: white;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-right: 10px;
 }
 
 #restaurant {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0px 10px 0px 10px;
 }
 #restaurant figure {
   width: 100%;
@@ -37,43 +125,97 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 #restaurant h2 {
-  margin: 0;
+  margin-top: 40px;
   width: 80%;
 }
-#restaurant p, #restaurant h4 {
+#restaurant p, #restaurant h3 {
   margin: 3px 0px 0px 0px;
-}
-#restaurant figcaption {
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  padding-bottom: 10px;
-  height: 50px;
 }
 #restaurant .all_card {
   width: 98%;
 }
-#restaurant .card {
+#restaurant .all_card .card {
   width: 95%;
   border-radius: 20px;
   border: 2px solid white;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
   margin-top: 10px;
 }
-#restaurant .card-img {
+#restaurant .all_card .card .card-img {
   width: 100%;
   height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
+#restaurant .all_card .card figcaption {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  height: 50px;
+}
+#restaurant .all_card .card figcaption .hearth {
+  margin: 10px 20px 0px 0px;
+  font-size: 20px;
+}
 
 footer {
   background-color: black;
   margin-top: 30px;
+  padding: 0px 10px;
+  width: 100%;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  color: white;
+  font-size: 16px;
+  margin: 0px 0px 10px 0px;
+  padding-top: 15px;
 }
 footer p {
-  color: red;
+  color: white;
   margin: 0;
-  padding: 0px 10px;
+  font-size: 12px;
+}
+footer .rubrique {
+  padding-bottom: 20px;
+}
+
+#la_palette_dugout header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#la_palette_dugout header h1 {
+  margin: 0;
+}
+#la_palette_dugout header .image-container {
+  position: relative;
+  width: 100%;
+}
+#la_palette_dugout header .text-overlay {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+#la_palette_dugout header i {
+  margin-right: 30px;
+  margin-top: 5px;
+}
+#la_palette_dugout h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Shrikhand", cursive;
+  border-radius: 20px 20px 0px 0px;
+  margin: 0;
+  width: 90%;
 }/*# sourceMappingURL=style.css.map */
