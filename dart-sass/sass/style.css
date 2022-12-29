@@ -175,47 +175,113 @@ footer h3 {
 }
 footer p {
   color: white;
-  margin: 0;
+  margin: 0px 0px 5px 0px;
   font-size: 12px;
 }
 footer .rubrique {
   padding-bottom: 20px;
 }
+footer .rubrique i {
+  margin-right: 10px;
+  width: 10px;
+}
 
 #la_palette_dugout header {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+#la_palette_dugout header .title-header {
+  display: flex;
   align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
 }
 #la_palette_dugout header h1 {
   margin: 0;
+  font-size: 24px;
 }
 #la_palette_dugout header .image-container {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 #la_palette_dugout header .text-overlay {
   position: absolute;
-  top: 200px;
+  top: 80%;
   bottom: 0;
+  left: 0px;
   width: 100%;
   height: auto;
   background: white;
+  margin: 0;
+  border-radius: 40px 40px 0px 0px;
+}
+#la_palette_dugout header i {
+  margin-left: 30px;
+}
+#la_palette_dugout header h2 {
+  font-size: 22px;
+  font-family: "Shrikhand", cursive;
+  margin: 15px 0px 0px 20px;
+}
+#la_palette_dugout main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#la_palette_dugout main h3 {
+  font-size: 16px;
+}
+#la_palette_dugout main .border-bot {
+  border-bottom: 2px solid #99E2D0;
+}
+#la_palette_dugout main button {
+  margin-top: 30px;
+  border-radius: 20px;
+  background: linear-gradient(#9356DC, #FF79DA);
+  border: 2px solid white;
+  width: 180px;
+  height: 40px;
+  color: white;
+}
+#la_palette_dugout main .menu_card {
+  border-radius: 20px;
+  border: 2px solid white;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 96%;
+  height: 60px;
+  margin-top: 15px;
   display: flex;
-  justify-content: space-between;
+}
+#la_palette_dugout main .card_name {
+  width: 90%;
+}
+#la_palette_dugout main .card_name h4 {
+  font-size: 16px;
+  margin: 0;
   padding-top: 10px;
   padding-left: 10px;
 }
-#la_palette_dugout header i {
-  margin-right: 30px;
-  margin-top: 5px;
-}
-#la_palette_dugout h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
-  font-family: "Shrikhand", cursive;
-  border-radius: 20px 20px 0px 0px;
+#la_palette_dugout main .card_name p {
   margin: 0;
-  width: 90%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 13px;
+}
+#la_palette_dugout main .tarif {
+  width: 10%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding-top: 20px;
+}
+#la_palette_dugout main section {
+  margin-top: 30px;
+}
+#la_palette_dugout main .bloc_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
