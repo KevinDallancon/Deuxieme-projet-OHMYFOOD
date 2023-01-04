@@ -1,0 +1,27 @@
+.footer {
+    background-color:black;
+    margin-top: 30px;
+    padding: 0px 10px;
+    width: 100%;
+    &__heading {
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        color: white;
+        font-size: 16px;
+        margin:0px 0px 10px 0px;
+        padding-top: 15px;
+    }
+    &__item {
+        color: white;
+        margin:0px 0px 5px 0px;
+        font-size: 12px;
+        text-decoration: none;
+    }
+    &__rubrique {
+        padding-bottom: 20px;
+        i { 
+            margin-right: 10px;
+            width: 10px;
+        }
+    }
+}
