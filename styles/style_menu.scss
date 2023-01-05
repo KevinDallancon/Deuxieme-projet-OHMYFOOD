@@ -1,7 +1,11 @@
+@import "../utils/variables";
 @import "../Layouts/footer";
 @import "../base/typography";
+@import "../components/buttons";
 @import "../utils/mixins";
-@import "../utils/variables";
+
+
+
 
 
 .header { 
@@ -57,15 +61,7 @@
     h3 {font-size: 16px;}
     .border-bot {
         border-bottom:2px solid #99E2D0 }
-    button {
-        margin-top: 30px;
-        border-radius: 20px;
-        background: linear-gradient(#9356DC, #FF79DA);
-        border:2px solid white;
-        width: 180px;
-        height: 40px;
-        color: white;
-    }
+
     .menu_card {
         border-radius: 20px;
         border: 2px solid white;
@@ -83,11 +79,18 @@
                 margin:0;
                 padding-top: 10px;
                 padding-left: 10px;}
-            p {margin: 0;
+            p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 90%;
+            height: 20px;
+            margin: 0;
             padding-left: 10px;
             padding-top: 5px;
-            font-size: 13px;}
-            text-overflow: ellipsis;
+            font-size: 13px;
+            
+            }
         }
         .tarif{
             width: 10%;
@@ -102,6 +105,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        }
         
     }
     @keyframes fade-in {
@@ -111,5 +115,5 @@
         to {
           opacity: 1;
         }
-      }
     }
+    

@@ -1,0 +1,13 @@
+.btn {
+    margin-top: 20px;
+    border-radius: 20px;
+    background: linear-gradient($primaryColor,$secondaryColor);
+    border: 2px solid white;
+    width: 180px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+        &:hover {
+        background-color: black;
+    }
+}
