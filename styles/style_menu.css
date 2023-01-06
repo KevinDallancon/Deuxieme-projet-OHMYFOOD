@@ -30,6 +30,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  position: relative;
 }
 
 p {
@@ -54,6 +55,7 @@ h3 {
   color: white;
   cursor: pointer;
 }
+
 .btn:hover {
   background-color: black;
 }
