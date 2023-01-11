@@ -1,14 +1,14 @@
-@import "../utils/variables";
-@import "../utils/functions";
-@import "../utils/mixins";
-@import "../base/base";
-@import "../base/typography";
-@import "../components/buttons";
-@import "../layouts/header";
-@import "../layouts/container";
-@import "../Layouts/footer";
-@import "../Utils/keyframes";
 
+@import "../dart-sass/sass/Utils/keyframes";
+@import "../dart-sass/sass/Utils/variables";
+@import "../dart-sass/sass/Utils/functions";
+@import "../dart-sass/sass/utils/mixins";
+@import "../dart-sass/sass/base/base";
+@import "../dart-sass/sass/base/typography";
+@import "../dart-sass/sass/components/buttons";
+@import "../dart-sass/sass/layouts/header";
+@import "../dart-sass/sass/layouts/container";
+@import "../dart-sass/sass/Layouts/footer";
 
 
 #container_spin {
@@ -24,7 +24,6 @@
 
   /* rappeler l'animation de disparition */
 } 
-
 .loading-spinner {
   width: 80px;
   height: 80px;
@@ -38,5 +37,10 @@
   position: relative;
   margin-top: 250px;
 
-  
+}
+.points {
+  background: linear-gradient($primaryColor, $secondaryColor);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

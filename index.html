@@ -17,11 +17,10 @@
 </head>
 
 <body>
-
-<div id="container_spin">
-    <div class="loading-spinner"></div>
-    <div class="mon_txt">Loading ...</div>
-</div>
+    <div id="container_spin">
+        <div class="loading-spinner"></div>
+        <div class="mon_txt">Loading<span class="points">...</span></div>
+    </div>
     
 <header class="header">
     <img class="header__logo" src="./images/logo/ohmyfood.png" alt="logo">
@@ -35,7 +34,7 @@
         <div class="intro__description">
             <h2 class="intro__title"> Réservez le menu qui vous convient</h2>
             <p class="intro__text">Decouvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button class="btn">Explorer nos restaurants</button>
+            <button id="btn">Explorer nos restaurants</button>
         </div>
     </div>
 </section>
@@ -61,7 +60,8 @@
                 <p>Ménilmontant</p>
             </div>
             <div class="card__hearth">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart empty"></i>
+                <i class="fa-solid fa-heart full"></i>
             </div>
         </figcaption>
         </a>
@@ -75,7 +75,8 @@
                 <p>Charonne</p>
             </div>
             <div class="card__hearth">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart empty"></i>
+                <i class="fa-solid fa-heart full"></i>
             </div>
         </figcaption>
         </a>
@@ -89,7 +90,8 @@
                 <p>Cité rouge</p>
             </div>
             <div class="card__hearth">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart empty"></i>
+                <i class="fa-solid fa-heart full"></i>
             </div>
         </figcaption>
         </a>
@@ -103,7 +105,8 @@
                 <p>Folie-Méricourt</p>
             </div>
             <div class="card__hearth">
-                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-heart empty"></i>
+                <i class="fa-solid fa-heart full"></i>
             </div>
         </figcaption>
         </a>

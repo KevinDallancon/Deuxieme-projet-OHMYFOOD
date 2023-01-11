@@ -1,4 +1,5 @@
 
+
 .intro {
     margin-bottom: 120px;
     &__search {
@@ -31,9 +32,9 @@
     &__text {
         width: 80%;
     }
-}
-
-.how-it-works {
+  }
+  
+  .how-it-works {
     width: 100%;
     margin-top: 50px;
     @include ColumnFlexDirection;
@@ -70,15 +71,15 @@
             margin-right: 10px;
         }
     }
-}
-
-.restaurants {
+  }
+  
+  .restaurants {
     @include ColumnFlexDirection;
     align-items: center;
     width: 100%;
     margin: 0;
     padding-top: 50px;
-
+  
     &__title {
         margin-top: 10px;
         width: 95%;
@@ -108,10 +109,25 @@
             display: flex;
             margin-left: 10px;
             padding-bottom: 10px;
-            }
+        }
         &__hearth {
             margin: 10px 20px 0px 0px;
             font-size: 20px;
+            position: relative;
+            i { 
+                position: absolute;
+            }
+            .full {
+                opacity: 0;
+            }
+            .full:hover {
+                opacity: 1;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-image: linear-gradient($primaryColor, $secondaryColor);
+                transition-duration: 3s;
+
+            }
         }
-    }
-    }}
+    }}}

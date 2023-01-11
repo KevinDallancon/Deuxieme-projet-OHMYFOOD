@@ -1,12 +1,14 @@
-@import "../utils/variables";
-@import "../Layouts/footer";
-@import "../base/typography";
-@import "../components/buttons";
-@import "../utils/mixins";
+@import "../dart-sass/sass/Utils/variables";
+@import "../dart-sass/sass/Layouts/footer";
+@import "../dart-sass/sass/base/typography";
+@import "../dart-sass/sass/components/buttons";
+@import "../dart-sass/sass/utils/mixins";
 
 
 
-
+body {
+    width: 100%;
+}
 
 .header { 
     display: flex;
@@ -29,7 +31,6 @@
         font-size: 100%;
        }
     &__container {
-        
         &__image {
             width: 100%;
             height: 270px;
@@ -55,8 +56,7 @@
     }
  }
  main {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin:auto;
     
     h3 {font-size: 16px;}
     .border-bot {
@@ -92,7 +92,7 @@
             
             }
         }
-        .tarif{
+        .tarif {
             width: 10%;
             height: auto;
             margin: 0;
@@ -105,15 +105,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        }
-        
     }
-    @keyframes fade-in {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-    }
-    
+
+}
