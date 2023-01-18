@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Mes variables */
 .footer {
   background-color: black;
@@ -27,10 +28,10 @@
   width: 10px;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  position: relative;
 }
 
 p {
@@ -60,103 +61,226 @@ h3 {
   opacity: 0.7;
 }
 
-body {
-  width: 100%;
+/* Loading spinner */
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-.header__logo {
-  width: 50%;
+@-webkit-keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    z-index: 5;
+  }
+  100% {
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    z-index: 5;
+  }
+  100% {
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+/* Loading spinner - points  */
+@-webkit-keyframes bouncing {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: translateY(-0.5em);
+  }
+  66% {
+    transform: none;
+  }
+}
+@keyframes bouncing {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: translateY(-0.5em);
+  }
+  66% {
+    transform: none;
+  }
+}
+/* animation card - Créer une animation */
+@-webkit-keyframes decalestart {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes decalestart {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* Utiliser une animation */
+.wallpaper {
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-left: 50px;
+}
+
+.header {
+  width: 100%;
 }
 .header__title {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 15px;
-  width: 100%;
 }
 .header__title__link {
-  font-size: 100%;
+  border: 1px solid red;
+  cursor: pointer;
 }
-.header__container__image {
-  width: 100%;
-  height: 270px;
+.header__title .fa-sharp {
+  border: 1px solid blue;
+  font-size: 20px;
 }
-.header__container__text-overlay {
-  position: absolute;
-  top: 280px;
-  background-color: white;
-  width: 100%;
-  height: 65px;
-  border-radius: 35px 35px 0px 0px;
-  margin: 0;
-  padding-right: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-family: "Shrikhand";
-  font-weight: 500;
-}
-.header__container h1 {
-  font-size: 24px;
+.header__logo {
+  width: 200px;
+  border: 2px solid red;
+  padding: 20px;
 }
 
-main {
-  margin: auto;
-}
-main h3 {
-  font-size: 16px;
-}
-main .border-bot {
-  border-bottom: 2px solid #99E2D0;
-}
-main .menu_card {
-  border-radius: 20px;
-  border: 2px solid white;
-  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
-  width: 96%;
-  height: 60px;
-  margin-top: 15px;
+.menu-restaurant-title {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  font-style: italic;
   display: flex;
+  justify-content: space-between;
 }
-main .card_name {
-  width: 90%;
-}
-main .card_name h4 {
-  font-size: 16px;
-  margin: 0;
-  padding-top: 10px;
-  padding-left: 10px;
-}
-main .card_name p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 90%;
-  height: 20px;
-  margin: 0;
-  padding-left: 10px;
-  padding-top: 5px;
-  font-size: 13px;
-}
-main .tarif {
-  width: 10%;
-  height: auto;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  padding-top: 20px;
-}
-main .bloc_center {
+
+#menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background: whitesmoke;
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.menu-details {
+  margin-top: 15px;
+}
+.menu-details .menu-title {
+  border-bottom: 3px solid #99E2D0;
+}
+.menu-details .menu-card {
+  display: flex;
+}
+.menu-details .menu-card__description {
+  display: flex;
+  flex-direction: column;
+}
+.menu-details .menu-card__description p {
+  margin-top: 5px;
+  text-overflow: ellipsis;
+}
+.menu-details .menu-card .tarif {
+  display: flex;
   align-items: center;
+  font-weight: 600;
+}
+.menu-details .menu-card .menu-card-original {
+  width: 100%;
+  background: white;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
+  display: flex;
+  justify-content: space-between;
+}
+.menu-details .menu-card .menu-card-animation {
+  border: 1px SOLID red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  cursor: pointer;
+  height: auto;
+  width: 0;
+  opacity: 1;
+  border-radius: 0 20px 20px 0;
+  padding: 15px;
+  margin-top: 15px;
+  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+.menu-details .menu-card .menu-card-animation .check {
+  margin-right: 0px;
+  border: 2px solid green;
+}
+.menu-details .menu-card .menu-card-animation:hover {
+  width: 70%;
+}
+.menu-details .menu-card .menu-card-animation .icone {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.ctrl-btn {
+  display: flex;
+  justify-content: center;
+}
+
+#entree {
+  -webkit-animation: decalestart 2s;
+          animation: decalestart 2s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+#plat {
+  -webkit-animation: decalestart 2s;
+          animation: decalestart 2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#dessert {
+  -webkit-animation: decalestart 2s;
+          animation: decalestart 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }/*# sourceMappingURL=style_menu.css.map */

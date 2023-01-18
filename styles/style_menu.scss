@@ -3,108 +3,139 @@
 @import "../dart-sass/sass/base/typography";
 @import "../dart-sass/sass/components/buttons";
 @import "../dart-sass/sass/utils/mixins";
+@import "../dart-sass/sass/Utils/keyframes";
 
 
+.wallpaper {
 
-body {
     width: 100%;
+    height: auto;
+    object-fit: cover;
+
 }
 
-.header { 
+.header {
+
+    width: 100%;
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__link {
+            border: 1px solid red;
+            cursor: pointer;
+
+        }
+        .fa-sharp {
+            border: 1px solid blue;
+            font-size: 20px;
+        }
+        
+    }
+    &__logo {
+        width: 200px;
+        border: 2px solid red;
+        padding: 20px;
+    }
+}
+
+.menu-restaurant-title {
+    font-family: "Shrikhand", cursive;
+    font-size: 25px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background: whitesmoke;
     width: 100%;
-    &__logo {
-        width: 50%;
-        height: auto;
-        object-fit: cover;
-        margin-left: 50px;
-        }   
+    padding: 20px;
+    border-radius: 30px 30px 0px 0px;
     
-    &__title {
-       display: flex;
-       align-items: center;
-       margin: 15px;
-       width: 100%;
-    }
-    &__title__link {
-        font-size: 100%;
-       }
-    &__container {
-        &__image {
-            width: 100%;
-            height: 270px;
-        }
-    &__text-overlay {
-        position: absolute;
-        top: 280px;
-        background-color: white;
-        width: 100%;
-        height: 65px;
-        border-radius: 35px 35px 0px 0px;
-        margin: 0;
-        padding-right: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-family: 'Shrikhand';
-        font-weight: 500;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    }
- }
- main {
-    margin:auto;
-    
-    h3 {font-size: 16px;}
-    .border-bot {
-        border-bottom:2px solid #99E2D0 }
+}
 
-    .menu_card {
-        border-radius: 20px;
-        border: 2px solid white;
-        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
-        width: 96%;
-        height: 60px;
-        margin-top: 15px;
+.menu-details {
+    margin-top: 15px;
+
+    .menu-title {
+
+        border-bottom: 3px solid $tertiaireColor;
+    }
+    .menu-card {
         display: flex;
-        
-        }
-        .card_name{
-            width: 90%;
-            h4 {
-                font-size: 16px;
-                margin:0;
-                padding-top: 10px;
-                padding-left: 10px;}
-            p {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            width: 90%;
-            height: 20px;
-            margin: 0;
-            padding-left: 10px;
-            padding-top: 5px;
-            font-size: 13px;
-            
-            }
+
+        &__description {
+            display: flex;
+            flex-direction: column;
+            ;
+            p { margin-top: 5px;
+                text-overflow: ellipsis}
         }
         .tarif {
-            width: 10%;
-            height: auto;
-            margin: 0;
             display: flex;
             align-items: center;
-            font-weight: bold;
-            padding-top: 20px;}
+            font-weight: 600;
             
-    .bloc_center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        }
+        .menu-card-original {
+            width: 100%;
+            background: white;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 20px;
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu-card-animation {
+            border: 1px SOLID red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $tertiaireColor;
+            cursor: pointer;
+            height: auto;
+            width: 0;
+            opacity: 1;
+            border-radius: 0 20px 20px 0;
+            padding: 15px;
+            margin-top: 15px;
+            transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            .check {
+                margin-right: 0px;
+                border: 2px solid green;
+            }
+            &:hover {
+                width: 70%;
+            }
+            .icone {
+                color: white;
+                transition: 0.4s ease-in-out
+            }
+        }
     }
+}
 
+.ctrl-btn { 
+    display: flex;
+    justify-content: center;
+}
+
+#entree {
+    animation: decalestart 2s;
+    animation-delay: 0s;
+}
+
+#plat {
+    animation: decalestart 2s;
+    animation-delay: 0.2s;
+}
+
+#dessert {
+    animation: decalestart 2s;
+    animation-delay: 0.5s;
 }

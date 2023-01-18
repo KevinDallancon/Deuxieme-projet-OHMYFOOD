@@ -1,3 +1,4 @@
+/* Loading spinner */
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -19,12 +20,36 @@
       z-index: -1;
       }
   }
+/* Loading spinner - points  */
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
+  @keyframes bouncing {
+    0% {
+      transform: none;
     }
-    to {
-      opacity: 1;
+    
+    33% {
+      transform: translateY(-.5em);
     }
-}
+    
+    66% {
+      transform: none;
+    }
+  }
+
+/* animation card - Créer une animation */
+
+ @keyframes decalestart {
+
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+ 
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+ }
+
+
+/* Utiliser une animation */
