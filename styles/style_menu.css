@@ -1,8 +1,23 @@
 @charset "UTF-8";
 /* Mes variables */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  width: 250px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
 .footer {
+  position: relative;
+  bottom: 0;
   background-color: black;
-  margin-top: 30px;
   padding: 0px 10px;
   width: 100%;
 }
@@ -49,16 +64,22 @@ h3 {
 #btn {
   margin-top: 20px;
   border-radius: 20px;
+  border-radius: 50px;
   background: linear-gradient(#9356DC, #FF79DA);
   border: 2px solid white;
-  width: 180px;
-  height: 40px;
+  width: 200px;
+  height: 60px;
   color: white;
   cursor: pointer;
 }
 
 #btn:hover {
   opacity: 0.7;
+}
+
+.ctrl-btn {
+  display: flex;
+  justify-content: center;
 }
 
 /* Loading spinner */
@@ -155,48 +176,67 @@ h3 {
 /* Utiliser une animation */
 .wallpaper {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  top: 150px;
 }
 
-.header {
-  width: 100%;
-}
-.header__title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .header__title__link {
-  border: 1px solid red;
   cursor: pointer;
+  color: black;
 }
 .header__title .fa-sharp {
-  border: 1px solid blue;
   font-size: 20px;
-}
-.header__logo {
-  width: 200px;
-  border: 2px solid red;
-  padding: 20px;
+  position: absolute;
+  left: 10px;
+  top: 25px;
 }
 
-.menu-restaurant-title {
+.menu-restaurant {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-restaurant .menu-restaurant-title {
+  width: 70%;
+  white-space: nowrap;
   font-family: "Shrikhand", cursive;
   font-size: 25px;
   font-style: italic;
   display: flex;
   justify-content: space-between;
 }
+.menu-restaurant .menu-restaurant-title__hearth {
+  margin: 10px 20px 0px 0px;
+  font-size: 20px;
+  position: relative;
+}
+.menu-restaurant .menu-restaurant-title__hearth i {
+  position: absolute;
+}
+.menu-restaurant .menu-restaurant-title__hearth .full {
+  opacity: 0;
+}
+.menu-restaurant .menu-restaurant-title__hearth .full:hover {
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  transition-duration: 1s;
+}
 
 #menu {
+  position: relative;
+  top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: whitesmoke;
   width: 100%;
-  padding: 20px;
+  height: 100%;
+  padding: 10px;
   border-radius: 30px 30px 0px 0px;
 }
 
@@ -207,33 +247,51 @@ h3 {
   border-bottom: 3px solid #99E2D0;
 }
 .menu-details .menu-card {
-  display: flex;
+  margin-top: 15px;
+  width: 100%;
 }
 .menu-details .menu-card__description {
   display: flex;
-  flex-direction: column;
-}
-.menu-details .menu-card__description p {
-  margin-top: 5px;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu-details .menu-card .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 80%;
+}
+.menu-details .menu-card .flex p {
+  margin-top: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu-details .menu-card .tarif {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 600;
+  width: 70px;
+  transition: all 0.3s ease-in-out; /* added */
 }
 .menu-details .menu-card .menu-card-original {
-  width: 100%;
+  max-width: 100%;
+  height: 50px;
   background: white;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 20px;
+  border-radius: 12px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
   display: flex;
   justify-content: space-between;
 }
 .menu-details .menu-card .menu-card-animation {
-  border: 1px SOLID red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,22 +299,21 @@ h3 {
   cursor: pointer;
   height: auto;
   width: 0;
-  opacity: 1;
-  border-radius: 0 20px 20px 0;
-  padding: 15px;
-  margin-top: 15px;
-  transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+  border-radius: 0px 12px 12px 0px;
+  transition: all 0.3s ease-in-out; /* added */
 }
-.menu-details .menu-card .menu-card-animation .check {
-  margin-right: 0px;
-  border: 2px solid green;
-}
-.menu-details .menu-card .menu-card-animation:hover {
-  width: 70%;
-}
-.menu-details .menu-card .menu-card-animation .icone {
+.menu-details .menu-card .icone {
   color: white;
-  transition: 0.4s ease-in-out;
+}
+.menu-details .menu-card:hover .menu-card-animation {
+  opacity: 1;
+  width: 70px;
+}
+.menu-details .menu-card:hover i {
+  display: inline-block;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
 }
 
 .ctrl-btn {

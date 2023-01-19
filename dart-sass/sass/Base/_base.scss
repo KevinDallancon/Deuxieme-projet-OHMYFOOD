@@ -1,36 +1,45 @@
 
 
 .intro {
-    margin-bottom: 120px;
     &__search {
         @include ColumnFlexDirection;
         align-items: center;
+        justify-content: center;
         background-color: rgba(216, 215, 215, 0.877);
-        height: 200px;
+        max-width: 100%;
+        height: 300px;
         }
     .icon {
         margin-right: 10px;
     }
   
     &__loc {
-        width: 60%;
-        height: 40px;
+        width: 80%;
+        height: 20%;
         display: flex;
         align-items: center;
+        justify-content: center;
+        font-weight: 400;
     }
    
     &__description {
         background-color: white;
         @include ColumnFlexDirection;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        
+        height: 80%;
     }
     &__title {
         width: 70%;
+        margin-top: 30px;
+        text-align: center;
+        
     }
     &__text {
-        width: 80%;
+        width: 85%;
+        margin-top: 15px;
+        text-align: center;
     }
   }
   
@@ -41,8 +50,9 @@
     align-items: center;
     &__title { width: 95%;}
     .list {
-        width: 95%;
+        width:90%;
         padding: 0;
+        margin: auto;
         &__item {
             display: flex;
             align-items: center;
@@ -53,9 +63,14 @@
             border-radius: 20px;
             box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
             margin-top: 15px;
+            cursor: pointer;
             i { 
                 margin-right: 20px;
                 color: grey;
+            }
+            &:hover {
+                background-color: #f5edff;
+                i { color: $primaryColor;}
             }
         }
         &__item-number {
@@ -86,6 +101,7 @@
     }
     &__cards{
         width: 95%;
+        margin-top: 20px;
     .card {
         border-radius: 20px;
         border: 2px solid white;
@@ -127,8 +143,6 @@
                 color: transparent;
                 background-image: linear-gradient($primaryColor, $secondaryColor);
                 transition-duration: 1s;
-                
-
             }
         }
     }}}

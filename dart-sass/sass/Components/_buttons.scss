@@ -1,10 +1,11 @@
 #btn {
     margin-top: 20px;
     border-radius: 20px;
+    border-radius: 50px;
     background: linear-gradient($primaryColor,$secondaryColor);
     border: 2px solid white;
-    width: 180px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
     color: white;
     cursor: pointer;
     
@@ -12,4 +13,9 @@
 
     #btn:hover {
         opacity:0.7;
+    }
+
+    .ctrl-btn { 
+        display: flex;
+        justify-content: center;
     }

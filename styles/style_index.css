@@ -92,37 +92,44 @@
 }
 /* Utiliser une animation */
 /* Mes variables */
-.intro {
-  margin-bottom: 120px;
-}
 .intro__search {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: rgba(216, 215, 215, 0.877);
-  height: 200px;
+  max-width: 100%;
+  height: 300px;
 }
 .intro .icon {
   margin-right: 10px;
 }
 .intro__loc {
-  width: 60%;
-  height: 40px;
+  width: 80%;
+  height: 20%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-weight: 400;
 }
 .intro__description {
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  height: 80%;
 }
 .intro__title {
   width: 70%;
+  margin-top: 30px;
+  text-align: center;
 }
 .intro__text {
-  width: 80%;
+  width: 85%;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .how-it-works {
@@ -136,8 +143,9 @@
   width: 95%;
 }
 .how-it-works .list {
-  width: 95%;
+  width: 90%;
   padding: 0;
+  margin: auto;
 }
 .how-it-works .list__item {
   display: flex;
@@ -149,10 +157,17 @@
   border-radius: 20px;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.068);
   margin-top: 15px;
+  cursor: pointer;
 }
 .how-it-works .list__item i {
   margin-right: 20px;
   color: grey;
+}
+.how-it-works .list__item:hover {
+  background-color: #f5edff;
+}
+.how-it-works .list__item:hover i {
+  color: #9356DC;
 }
 .how-it-works .list__item-number {
   background: #9356DC;
@@ -181,6 +196,7 @@
 }
 .restaurants__cards {
   width: 95%;
+  margin-top: 20px;
 }
 .restaurants__cards .card {
   border-radius: 20px;
@@ -250,10 +266,11 @@ h3 {
 #btn {
   margin-top: 20px;
   border-radius: 20px;
+  border-radius: 50px;
   background: linear-gradient(#9356DC, #FF79DA);
   border: 2px solid white;
-  width: 180px;
-  height: 40px;
+  width: 200px;
+  height: 60px;
   color: white;
   cursor: pointer;
 }
@@ -262,21 +279,29 @@ h3 {
   opacity: 0.7;
 }
 
-.header {
+.ctrl-btn {
   display: flex;
   justify-content: center;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header__logo {
-  width: 50%;
+  width: 250px;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-top: 10px;
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   background-color: black;
-  margin-top: 30px;
   padding: 0px 10px;
   width: 100%;
 }
@@ -308,10 +333,9 @@ h3 {
   text-align: center;
   background-color: #fff;
   z-index: 5;
-  position: absolute;
-  -webkit-animation: disappear 3s linear forwards;
-          animation: disappear 3s linear forwards;
-  opacity: 80%;
+  position: fixed;
+  -webkit-animation: disappear 1.5s linear forwards;
+          animation: disappear 1.5s linear forwards;
   /* rappeler l'animation de disparition */
 }
 
@@ -328,16 +352,22 @@ h3 {
   transform: translate(-50%, -50%);
   position: relative;
   margin-top: 250px;
-  background-image: url(/images/logo/ohmyfood@2x.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+}
+
+.txt-load {
+  position: relative;
+  top: -90px;
+  font-size: 22px;
+  font-weight: 800;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .points {
   font-weight: 800;
-  font-size: 50px;
-  margin-top: 30px;
+  font-size: 70px;
 }
 
 .dot {
