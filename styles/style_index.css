@@ -92,6 +92,13 @@
 }
 /* Utiliser une animation */
 /* Mes variables */
+@media only screen and (min-width: 1024px) {
+  main h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+}
+
 .intro__search {
   display: flex;
   flex-direction: column;
@@ -139,6 +146,13 @@
   flex-direction: column;
   align-items: center;
 }
+@media only screen and (min-width: 1024px) {
+  .how-it-works {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
 .how-it-works__title {
   width: 95%;
 }
@@ -146,6 +160,13 @@
   width: 90%;
   padding: 0;
   margin: auto;
+}
+@media only screen and (min-width: 1024px) {
+  .how-it-works .list {
+    max-width: 50%;
+    margin: auto;
+    margin-top: 50px;
+  }
 }
 .how-it-works .list__item {
   display: flex;
@@ -190,6 +211,13 @@
   margin: 0;
   padding-top: 50px;
 }
+@media only screen and (min-width: 1024px) {
+  .restaurants {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+}
 .restaurants__title {
   margin-top: 10px;
   width: 95%;
@@ -198,14 +226,39 @@
   width: 95%;
   margin-top: 20px;
 }
+@media only screen and (min-width: 1024px) {
+  .restaurants__cards {
+    max-width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.restaurants__cards a {
+  text-decoration: none;
+}
 .restaurants__cards .card {
+  position: relative;
   border-radius: 20px;
   border: 2px solid white;
   box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
   margin: 0px 0px 15px 0px;
 }
-.restaurants__cards .card a {
-  text-decoration: none;
+@media only screen and (min-width: 1024px) {
+  .restaurants__cards .card {
+    width: 250px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+}
+.restaurants__cards .card__new {
+  background: #99E2D0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  color: rgb(8, 136, 93);
 }
 .restaurants__cards .card__img {
   width: 100%;
@@ -219,6 +272,7 @@
 }
 .restaurants__cards .card__text p, .restaurants__cards .card__text h3 {
   margin: 5px 0px 0px 0px;
+  color: black;
 }
 .restaurants__cards .card__description {
   display: flex;
