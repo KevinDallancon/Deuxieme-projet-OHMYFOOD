@@ -283,6 +283,7 @@
   margin: 10px 20px 0px 0px;
   font-size: 20px;
   position: relative;
+  color: black;
 }
 .restaurants__cards .card__hearth i {
   position: absolute;
