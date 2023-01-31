@@ -176,7 +176,7 @@ h3 {
 /* Utiliser une animation */
 .wallpaper {
   width: 100%;
-  height: 100%;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
   top: 150px;
@@ -249,8 +249,12 @@ h3 {
 .menu-details {
   margin-top: 15px;
 }
-.menu-details .menu-title {
-  border-bottom: 3px solid #99E2D0;
+.menu-details h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
 }
 .menu-details .menu-card {
   margin-top: 15px;

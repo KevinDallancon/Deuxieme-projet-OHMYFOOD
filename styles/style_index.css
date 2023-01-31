@@ -391,7 +391,6 @@ h3 {
   position: fixed;
   -webkit-animation: disappear 1.5s linear forwards;
           animation: disappear 1.5s linear forwards;
-  /* rappeler l'animation de disparition */
 }
 
 .loading-spinner {
