@@ -30,13 +30,29 @@
     }
 
 }
+#menu {
+    position: relative;
+    top: -50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
+    @include md-breakpoint {
+        width: 60%;
+        margin: auto;
+        }
+}
 
 .menu-restaurant {
     width: 95%;
     display: flex;
     justify-content: space-between;
     
-    .menu-restaurant-title {
+    &__title {
         width: 70%;
         white-space: nowrap;
         font-family: "Shrikhand", cursive;
@@ -66,22 +82,6 @@
     }
 }
 
-#menu {
-    position: relative;
-    top: -50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: whitesmoke;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    border-radius: 30px 30px 30px 30px;
-    @include md-breakpoint {
-        width: 60%;
-        margin: auto;
-        }
-}
 
 .menu-details {
     margin-top: 15px;
